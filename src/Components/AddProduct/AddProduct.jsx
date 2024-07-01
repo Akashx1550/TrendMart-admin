@@ -29,7 +29,7 @@ const AddProduct = () => {
         formData.append('product', image);
 
         //Upload image to the server
-        await fetch('http://localhost:4000/upload', {
+        await fetch('https://trendmart-backend.onrender.com/upload', {
             method: 'POST',
             headers: {
                 Accept: 'application/json'
@@ -42,7 +42,7 @@ const AddProduct = () => {
             product.image = responseData.image_url;
             console.log(product);
             //Add product to the database
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://trendmart-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
